@@ -75,16 +75,6 @@ void dcMotor::setSpeed(uint8_t spd)
     speed = spd;
 }
 
-void dcMotor::invert()
-{
-    if (inverted == false)
-    {
-        inverted = true;
-        return;
-    }
-    inverted = false;
-}
-
 uint8_t dcMotor::getDirPinA()
 {
     return pin_a;
