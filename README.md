@@ -27,7 +27,7 @@ The library models motor objects with speed value, output pins for direction, ou
 
 ## Example
 
-```arduino
+```C++
 #include <Arduino.h>
 
 void setup() {
