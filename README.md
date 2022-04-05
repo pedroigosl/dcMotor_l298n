@@ -22,6 +22,8 @@ The library models motor objects with speed value, output pins for direction, ou
 - ***runForward()***
 - ***runBackward()***
 - ***stop()***
+- ***run(mode)***
+- ***run(spd, mode)***
 
 4 - If needed, you can recover values using ***get*** functions
 
