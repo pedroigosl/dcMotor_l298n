@@ -169,7 +169,7 @@ void dcMotor::runForward()
 {
     try
     {
-        if (pin_a == NULL || pin_b == NULL)
+        if (pin_a == NULL || pin_b == NULL || pin_spd == NULL)
         {
             throw;
         }
@@ -200,7 +200,7 @@ void dcMotor::runBackward()
 {
     try
     {
-        if (pin_a == NULL || pin_b == NULL)
+        if (pin_a == NULL || pin_b == NULL || pin_spd == NULL)
         {
             throw;
         }

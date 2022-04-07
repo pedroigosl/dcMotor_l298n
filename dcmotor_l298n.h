@@ -49,12 +49,12 @@ public:
     void run(uint8_t spd, uint8_t mode);
 
 private:
-    uint8_t *pin_a, *pin_b;             // direction pins
-    uint8_t *pin_spd;                   // speed pin
-    uint8_t speed = 0;                  // speed value
-    uint8_t pinout_a = 0, pinout_b = 0; // direction pins outputs
-    uint8_t pinout_s = 0;               // speed pin output
-    bool inverted = false;              // whether to change motor direction
+    uint8_t *pin_a = NULL, *pin_b = NULL; // direction pins
+    uint8_t *pin_spd = NULL;              // speed pin
+    uint8_t speed = 0;                    // speed value
+    uint8_t pinout_a = 0, pinout_b = 0;   // direction pins outputs
+    uint8_t pinout_s = 0;                 // speed pin output
+    bool inverted = false;                // whether to change motor direction
 };
 
 #endif
