@@ -87,16 +87,52 @@ void dcMotor::invert()
 
 uint8_t dcMotor::getDirPinA()
 {
+    try
+    {
+        if (pin_a == NULL)
+        {
+            throw;
+        }
+    }
+    catch (...)
+    {
+        return 0;
+    }
     return pin_a;
 }
 
 uint8_t dcMotor::getDirPinB()
 {
+    try
+    {
+        if (pin_b == NULL)
+        {
+            throw;
+        }
+    }
+    catch (...)
+    {
+        return 0;
+    }
     return pin_b;
 }
 
 uint8_t *dcMotor::getDirPins()
 {
+    try
+    {
+        if (pin_a == NULL || pin_b == NULL)
+        {
+            throw;
+        }
+    }
+    catch (...)
+    {
+        uint8_t pins[2];
+        pins[0] = 0;
+        pins[1] = 0;
+        return pins;
+    }
     uint8_t pins[2];
     pins[0] = pin_a;
     pins[1] = pin_b;
@@ -105,6 +141,17 @@ uint8_t *dcMotor::getDirPins()
 
 uint8_t dcMotor::getSpdPin()
 {
+    try
+    {
+        if (pin_spd == NULL)
+        {
+            throw;
+        }
+    }
+    catch (...)
+    {
+        return 0;
+    }
     return pin_spd;
 }
 
@@ -120,6 +167,18 @@ bool dcMotor::isInverted()
 
 void dcMotor::runForward()
 {
+    try
+    {
+        if (pin_a == NULL || pin_b == NULL)
+        {
+            throw;
+        }
+    }
+    catch (...)
+    {
+        return;
+    }
+
     if (inverted == true)
     {
         pinout_a = 0;
@@ -139,6 +198,18 @@ void dcMotor::runForward()
 
 void dcMotor::runBackward()
 {
+    try
+    {
+        if (pin_a == NULL || pin_b == NULL)
+        {
+            throw;
+        }
+    }
+    catch (...)
+    {
+        return;
+    }
+
     if (inverted == true)
     {
         pinout_a = 1;
@@ -158,6 +229,18 @@ void dcMotor::runBackward()
 
 void dcMotor::stop()
 {
+    try
+    {
+        if (pin_a == NULL || pin_b == NULL)
+        {
+            throw;
+        }
+    }
+    catch (...)
+    {
+        return;
+    }
+
     pinout_a = 0;
     pinout_b = 0;
 
