@@ -33,12 +33,16 @@ The library models motor objects with speed value, output pins for direction, ou
 #include <Arduino.h>
 
 void setup() {
+  ...
   dcMotor motor_A(5,6,7);
+  ...
 }
 
 void loop() {
+  ...
   motor_A.setSpeed(125);
   motor_A.runForward();
+  ...
 }
 ```
 
